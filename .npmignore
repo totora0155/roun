@@ -1,0 +1,5 @@
+node_modules/
+test/
+.gitignore
+.DS_Store
+karma.conf.js
