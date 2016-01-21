@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RounJS</title>
+</head>
+<body>
+  <script src="lib/index.js"></script>
+  <script>
+    var roun = roun();
+    roun.on('foo/:id', function (id) {
+      console.log('id is %s', id)
+      console.info('foo/:id');
+    });
+    roun.on('foo/bar/:id', function (id) {
+      console.log('id is %s', id)
+      console.info('foo/bar/:id');
+    });
+  </script>
+</body>
+</html>
