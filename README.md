@@ -14,14 +14,14 @@ roun.on('', function () {
 });
 roun.on('foo/:id/bar/:name', function (id, name) {
   console.info('id is %s, name is %s', id, name)
-  console.log('foo/:id/bar/:name');
+  console.log('/#!foo/1/bar/john');
 });
 roun.on('foo/bar/:id', function (id) {
   console.info('id is %s', id)
-  console.log('foo/bar/:id');
+  console.log('/#!foo/bar/12');
 });
 roun.on('404', function () {
-  console.log('404');
+  console.log('/#!404');
 });
 //
 // or
