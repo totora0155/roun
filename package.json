@@ -17,7 +17,7 @@
     "karma-mocha": "^0.2.1",
     "karma-phantomjs-launcher": "^0.2.3",
     "mocha": "^2.3.4",
-    "phantomjs": "^1.9.19",
+    "phantomjs": "^1.9.19"
   },
   "homepage": "https://github.com/totora0155/roun#readme",
   "keywords": [],
@@ -28,6 +28,6 @@
     "url": "git@github.com:totora0155/roun.git"
   },
   "scripts": {
-    "test": "karma test"
+    "test": "karma start"
   }
 }
