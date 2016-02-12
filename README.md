@@ -23,6 +23,7 @@ roun.on('foo/bar/:id', function (id) {
 roun.on('404', function () {
   console.log('/#!404');
 });
+roun.exec();
 //
 // or
 //
