@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('babel-polyfill')) :
-  typeof define === 'function' && define.amd ? define(['babel-polyfill'], factory) :
-  (global.roun = factory(global.babelPolyfill));
-}(this, function (babelPolyfill) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global.roun = factory());
+}(this, function () { 'use strict';
 
   var _events = {};
   var hashBase = undefined;

@@ -1,6 +1,4 @@
-import "babel-polyfill";
-
-const _events = {}
+const _events = {};
 let hashBase, notFoundPath;
 
 export default roun;
