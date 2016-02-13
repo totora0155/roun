@@ -1,7 +1,7 @@
 {
   "name": "roun",
-  "description": "a Route library",
-  "version": "0.1.0",
+  "description": "a Hash base route library",
+  "version": "0.1.1",
   "author": {
     "name": "nju33",
     "email": "sski0155+npm@gmail.com",
@@ -11,23 +11,30 @@
     "url": "https://github.com/totora0155/roun/issues"
   },
   "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
     "chai": "^3.4.1",
+    "chokidar-cli": "^1.2.0",
     "karma": "^0.13.19",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^0.2.1",
     "karma-phantomjs-launcher": "^0.2.3",
     "mocha": "^2.3.4",
-    "phantomjs": "^1.9.19"
+    "phantomjs": "^1.9.19",
+    "rollup": "^0.25.3",
+    "rollup-plugin-babel": "^2.3.9"
   },
   "homepage": "https://github.com/totora0155/roun#readme",
   "keywords": [],
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "./roun.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:totora0155/roun.git"
   },
   "scripts": {
-    "test": "karma start"
-  }
+    "start": "chokidar 'src/roun.js' -c 'rollup -c'",
+    "test": "karma start",
+    "test:run": "karma start --single-run"
+  },
+  "dependencies": {}
 }

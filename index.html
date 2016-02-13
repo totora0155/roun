@@ -4,36 +4,40 @@
   <title>RounJS</title>
 </head>
 <body>
-  <script src="lib/index.js"></script>
+  <script src="roun.js"></script>
   <script>
-    var roun = roun({
+    var route = roun({
       notFoundPath: '404',
-      hashBase: '#!',
+      hashBase: '#!/',
     });
-    roun.on('', function () {
-      console.log('/#!');
+    route.on('', function () {
+      console.log('/#!/');
     });
-    roun.on('foo/:id/bar/:name', function (id, name) {
-      console.info('id is %s, name is %s', id, name)
-      console.log('foo/:id/bar/:name');
+    route.on('foo/:id/bar/:name', function (data) {
+      console.info('id is %s, name is %s', data.id, data.name)
+      console.log('/#!/foo/:id/bar/:name');
     });
-    roun.on('foo/bar/:id', function (id) {
-      console.info('id is %s', id)
-      console.log('foo/bar/:id');
+    route.on('foo/bar/:id', function (data) {
+      console.info('id is %s', data.id)
+      console.log('/#!/foo/bar/:id');
     });
-    roun.on('404', function () {
-      console.log('404');
+    route.on('404', function () {
+      console.log('/#!/404');
     });
-    roun.exec();
+    route.exec();
     //
     // or
     //
-    // roun
+    // route
     //   .on('', function () {...})
     //   .on('foo/:id/bar/:name', function (id, name) {...})
     //   .on('foo/bar/:id', function (id) {...})
     //   .on('404', function () {...})
     //   .exec();
   </script>
+
+  <a href="/#!/foo/bar/123">/#!/foo/bar/123</a><br>
+  <a href="/#!/foo/1/bar/john">/#!/foo/1/bar/john</a><br>
+  <a href="/#!/aaa">404</a>
 </body>
 </html>
