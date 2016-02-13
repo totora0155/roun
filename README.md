@@ -6,11 +6,27 @@
 
 A hash base route library ( `< 3KB` )
 
+## Install
+
+### npm
+
+```
+npm i -S roun
+```
+
+### bower
+```
+bower i -S roun
+```
+
 ## Example
+
 ### On browser
 
+As was installed using the bower
+
 ```js
-<script src="roun.js"></script>
+<script src="bower_components/roun/roun.js"></script>
 <script>
   var route = roun({
     notFoundPath: '/404',

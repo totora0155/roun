@@ -1,5 +1,12 @@
 node_modules/
+bower_components/
+example/
+es/
 test/
 .gitignore
 .DS_Store
 karma.conf.js
+rollup.es.config.js
+rollup.umd.config.js
+.babelrc
+.travis.yml
