@@ -1,4 +1,7 @@
 # Roun
+
+[![npm version](https://badge.fury.io/js/roun.svg)](https://badge.fury.io/js/roun)
+
 [![Build Status](https://travis-ci.org/totora0155/roun.svg?branch=master)](https://travis-ci.org/totora0155/roun)
 
 A hash base route library ( `< 3KB` )
@@ -76,7 +79,7 @@ rollup xxxx.js -o bundle.js -f umd -n xxx
 ## Options
 
 name         | description                        | example                   | default
-:----------- | :--------------------------------- | :------------------------ | 
+:----------- | :--------------------------------- | :------------------------ |
 notFoundPath | Redirect path, when undefined path | `/404`                    | '/404'
 hashBase     | Hash type                          | `#` and `#!` and the like | `#`
 
