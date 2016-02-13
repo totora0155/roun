@@ -6,7 +6,7 @@ export default roun;
 function roun(_opts) {
   let opts = _opts || {};
   hashBase = opts.hashBase || '#';
-  notFoundPath = opts.notFoundPath || '';
+  notFoundPath = opts.notFoundPath || '/404';
 
   window.addEventListener('hashchange', process);
 

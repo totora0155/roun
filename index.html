@@ -7,21 +7,21 @@
   <script src="roun.js"></script>
   <script>
     var route = roun({
-      notFoundPath: '404',
-      hashBase: '#!/',
+      notFoundPath: '/404',
+      hashBase: '#!',
     });
-    route.on('', function () {
+    route.on('/', function () {
       console.log('/#!/');
     });
-    route.on('foo/:id/bar/:name', function (data) {
+    route.on('/foo/:id/bar/:name', function (data) {
       console.info('id is %s, name is %s', data.id, data.name)
       console.log('/#!/foo/:id/bar/:name');
     });
-    route.on('foo/bar/:id', function (data) {
+    route.on('/foo/bar/:id', function (data) {
       console.info('id is %s', data.id)
       console.log('/#!/foo/bar/:id');
     });
-    route.on('404', function () {
+    route.on('/404', function () {
       console.log('/#!/404');
     });
     route.exec();
@@ -29,10 +29,10 @@
     // or
     //
     // route
-    //   .on('', function () {...})
-    //   .on('foo/:id/bar/:name', function (id, name) {...})
-    //   .on('foo/bar/:id', function (id) {...})
-    //   .on('404', function () {...})
+    //   .on('/', function () {...})
+    //   .on('/foo/:id/bar/:name', function (data) {...})
+    //   .on('/foo/bar/:id', function (data) {...})
+    //   .on('/404', function () {...})
     //   .exec();
   </script>
 

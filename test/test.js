@@ -14,12 +14,12 @@ describe('RounJS', () => {
     existsSpy = sinon.spy();
     notFoundSpy = sinon.spy();
     route = this.route = roun({
-      notFoundPath: '404',
-      hashBase: '#!/'
+      notFoundPath: '/404',
+      hashBase: '#!'
     });
     route
-      .on(':name/:id', existsSpy)
-      .on('404', notFoundSpy);
+      .on('/:name/:id', existsSpy)
+      .on('/404', notFoundSpy);
 
     location = global.location = {
       set href(url) {

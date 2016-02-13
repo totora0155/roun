@@ -1,37 +1,51 @@
 # Roun
 
-Maybe, route library by Javascript
+[![Build Status](https://travis-ci.org/totora0155/roun.svg?branch=master)](https://travis-ci.org/totora0155/roun)
+
+A hash base route library
 
 ## Example
 
-```js
-var roun = roun({
-  notFoundPath: '404',
-  hashBase: '#!',
-});
-roun.on('', function () {
-  console.log('/#!');
-});
-roun.on('foo/:id/bar/:name', function (id, name) {
-  console.info('id is %s, name is %s', id, name)
-  console.log('/#!foo/1/bar/john');
-});
-roun.on('foo/bar/:id', function (id) {
-  console.info('id is %s', id)
-  console.log('/#!foo/bar/12');
-});
-roun.on('404', function () {
-  console.log('/#!404');
-});
-roun.exec();
-//
-// or
-//
-// roun
-//   .on('', function () {...})
-//   .on('foo/:id/bar/:name', function (id, name) {...})
-//   .on('foo/bar/:id', function (id) {...})
-//   .on('404', function () {...})
-//   .exec();
+### On browser
 
+```js
+<script src="roun.js"></script>
+<script>
+  var route = roun({
+    notFoundPath: '/404',
+    hashBase: '#!',
+  });
+  route.on('/', function () {
+    console.log('/#!/');
+  });
+  route.on('/foo/:id/bar/:name', function (data) {
+    console.info('id is %s, name is %s', data.id, data.name)
+    console.log('/#!/foo/123/bar/john');
+  });
+  route.on('/foo/bar/:id', function (data) {
+    console.info('id is %s', data.id)
+    console.log('/#!/foo/bar/789');
+  });
+  route.on('/404', function () {
+    console.log('/#!/404');
+  });
+  route.exec();
+  //
+  // or
+  //
+  // route
+  //   .on('/', function () {...})
+  //   .on('/foo/:id/bar/:name', function (data) {...})
+  //   .on('/foo/bar/:id', function (data) {...})
+  //   .on('/404', function () {...})
+  //   .exec();
+</script>
 ```
+
+## Options
+|name|description|example|default|
+|:-|:-|:-|
+|notFoundPath|Redirect path, when undefined path|`/404`|'/404'|
+|hashBase|Hash type|`#` and `#!` and the like|`#`|
+
+## Change log
