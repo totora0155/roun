@@ -29,8 +29,12 @@
     "url": "git@github.com:totora0155/roun.git"
   },
   "scripts": {
-    "start": "chokidar 'src/roun.js' -c 'rollup -c'",
-    "test": "mocha test/test.js"
+    "start": "chokidar 'src/roun.js' -c 'npm run build:umd'",
+    "build:es": "rollup -c rollup.es.config.js",
+    "build:umd": "rollup -c rollup.umd.config.js",
+    "build": "npm run build:es; npm run build:umd",
+    "test": "mocha test/test.js",
+    "prepublish": "npm run build"
   },
   "dependencies": {}
 }

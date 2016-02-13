@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "start": "rollup index.js -o bundle.js -f umd -n xxx"
+  }
+}

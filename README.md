@@ -42,9 +42,42 @@ A hash base route library
 </script>
 ```
 
+### With browserify
+
+```js
+const roun = require('roun');
+roun().on('/', () => {});
+```
+
+```
+browserify xxx.js -o bundle.js
+```
+
+### With webpack
+
+```js
+const roun = require('roun');
+roun().on('/', () => {});
+```
+
+```
+webpack xxx.js bundle.js
+```
+
+### With rollup
+
+```js
+import roun from '../../es/roun';
+roun().on('/', () => {});
+```
+
+```
+rollup xxxx.js -o bundle.js -f umd -n xxx
+```
+
 ## Options
 |name|description|example|default|
-|:-|:-|:-|
+|:--|:--|:--|
 |notFoundPath|Redirect path, when undefined path|`/404`|'/404'|
 |hashBase|Hash type|`#` and `#!` and the like|`#`|
 
