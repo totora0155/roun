@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/totora0155/roun.svg?branch=master)](https://travis-ci.org/totora0155/roun)
 
-A hash base route library
+A hash base route library ( `< 3KB` )
 
 ## Example
 
