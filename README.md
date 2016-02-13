@@ -67,7 +67,7 @@ webpack xxx.js bundle.js
 ### With rollup
 
 ```js
-import roun from '../../es/roun';
+import roun from 'roun/es/roun';
 roun().on('/', () => {});
 ```
 
